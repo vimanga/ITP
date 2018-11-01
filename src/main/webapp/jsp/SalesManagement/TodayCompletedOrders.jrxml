@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TodayCompletedOrders" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c3e85a87-f009-42ba-8c63-8ceee5548df5">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Mysql"/>
+	<queryString language="SQL">
+		<![CDATA[select * from sales]]>
+	</queryString>
+	<field name="salesPrefix" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="salesPrefix"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales"/>
+	</field>
+	<field name="salesID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="salesID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales"/>
+	</field>
+	<field name="salesCode" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="salesCode"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales"/>
+	</field>
+	<field name="dateCompleted" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="dateCompleted"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales"/>
+	</field>
+	<field name="techID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="techID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales"/>
+	</field>
+	<field name="driverID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="driverID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales"/>
+	</field>
+	<field name="totalAmount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="totalAmount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales"/>
+	</field>
+	<field name="orID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="orID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="73" splitType="Stretch">
+			<image>
+				<reportElement x="-12" y="-19" width="583" height="80" uuid="657f8529-b28a-40bf-b7b4-9877d32a25c6"/>
+				<imageExpression><![CDATA["src/main/webapp/Images/pdfimg.PNG"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="102" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="-6" y="45" width="566" height="38" forecolor="rgba(66, 134, 244, 0.5803922)" uuid="ddea300e-38cb-4e22-bce3-297c6d4de377"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="167" y="-6" width="210" height="30" forecolor="#000000" uuid="e44cf15b-79b1-43d8-9a42-15ebff7447fb"/>
+				<textElement textAlignment="Right">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Today Completed Orders]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="460" y="18" width="101" height="21" uuid="9bea2d89-8274-42ef-bf70-795affc2e003"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="461" y="0" width="100" height="22" uuid="79d03ecd-8b1b-47f1-a0c3-c6c56a3ca73f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-11" y="54" width="87" height="21" uuid="4abbc474-6bf1-4641-9f60-cf5d6f0643c6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b459c6df-8ecb-4c5a-b2b6-0332895e47e7"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Sales Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="153" y="55" width="120" height="20" uuid="1fa42f41-a57f-4588-911f-550b53aa2c50">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7db5a5a9-e997-4e6b-baba-44ce0142e822"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Completed Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="54" width="98" height="21" uuid="571fdea4-aa6a-466c-ab25-6b4a5fb56324">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="81e7ed7a-a468-42b4-be6b-c6a3773eb9ef"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Technician ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="385" y="54" width="62" height="21" uuid="9859f5c3-138d-4b7f-9463-c7529dc1508f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a8b3b03-1bfb-4edf-93ff-5764576a23cf"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Driver ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="54" width="99" height="21" uuid="fcfa947c-c39a-4a39-ab81-4fa1c918bd31">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b97ecfd4-4796-4ad1-8f1d-010aa29c9fc7"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Total Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="55" width="63" height="20" uuid="abf8e478-a33b-471e-98b1-e709c5283b3b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="62d8b571-6cf1-4ac4-8d04-41550b775978"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Order ID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="73" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="-6" y="18" width="566" height="28" uuid="75bc9d9a-3807-47b2-9ca2-9f16476ac8a2"/>
+			</rectangle>
+			<textField>
+				<reportElement x="1" y="23" width="60" height="25" uuid="f9efc643-0ec6-44d7-b51c-988446f79bae">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b459c6df-8ecb-4c5a-b2b6-0332895e47e7"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salesCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="158" y="23" width="120" height="25" uuid="52280d87-67f9-429f-837b-08513bb0de09">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7db5a5a9-e997-4e6b-baba-44ce0142e822"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateCompleted}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="284" y="23" width="78" height="25" uuid="3233942d-27f4-46f3-9707-395a27d64400">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="81e7ed7a-a468-42b4-be6b-c6a3773eb9ef"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{techID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="385" y="23" width="75" height="25" uuid="83127d8b-fdea-45d5-919a-51b22a09b6ae">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8a8b3b03-1bfb-4edf-93ff-5764576a23cf"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{driverID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="461" y="23" width="99" height="25" uuid="291ed227-3b98-4f65-ab7a-9c04779caa6c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b97ecfd4-4796-4ad1-8f1d-010aa29c9fc7"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="23" width="53" height="25" uuid="7af9e59e-ce6c-40a3-8e65-b61d77d68510">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="62d8b571-6cf1-4ac4-8d04-41550b775978"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{orID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="65" splitType="Stretch">
+			<rectangle radius="13">
+				<reportElement mode="Opaque" x="-15" y="15" width="584" height="50" forecolor="rgba(66, 134, 244, 0.5803922)" backcolor="rgba(66, 134, 244, 0.59607846)" uuid="2d38d5ee-30e9-451a-af27-ae4041517201"/>
+				<graphicElement>
+					<pen lineWidth="5.0" lineStyle="Double"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="8" y="25" width="546" height="30" forecolor="#FFFFFF" uuid="5b408eee-8c37-405f-b0e9-44310555aa86"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Copyright © 2018 Automated Barcode Solutions (Pvt) Ltd . All rights reserved]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

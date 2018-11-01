@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ea0def79-deb8-4de4-bfba-b0b1db6df67e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="My Driver-My Sql"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<queryString language="SQL">
+		<![CDATA[select * from client_order left join client_order_device on client_order.clieOrdID= client_order_device.clOrderID]]>
+	</queryString>
+	<field name="clieOrdID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="clieOrdID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="client_order"/>
+	</field>
+	<field name="custID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="custID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="client_order"/>
+	</field>
+	<field name="expectedDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="expectedDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="client_order"/>
+	</field>
+	<field name="delLocation" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="delLocation"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="client_order"/>
+	</field>
+	<field name="paymentType" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="paymentType"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="client_order"/>
+	</field>
+	<field name="descrip" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="descrip"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="client_order"/>
+	</field>
+	<field name="delType" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="delType"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="client_order"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="-14" y="-11" width="583" height="90" uuid="11e141d9-8d87-4fdd-9e56-566654061a84"/>
+				<imageExpression><![CDATA["src/main/webapp/Images/pdfimg.PNG"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="131" splitType="Stretch">
+			<staticText>
+				<reportElement x="157" y="20" width="240" height="30" forecolor="#000000" uuid="d81f4534-c2c4-487a-9165-605585a1b456"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[ORDER DETAILS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="101" width="100" height="30" uuid="84b5b7d5-51d5-46cc-a6aa-263e3642777d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Order ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="340" y="106" width="100" height="20" uuid="a1eb6fc4-416d-42a6-bfe0-2081a3ba88ed"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clieOrdID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="131" splitType="Stretch">
+			<textField>
+				<reportElement x="340" y="20" width="100" height="20" uuid="11713d94-27e8-4e17-aead-6e205fb45bde"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{custID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="50" y="15" width="100" height="30" uuid="fc756f2c-4844-40e1-a3d8-a311f13c4311"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Customer ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="70" width="100" height="30" uuid="7d0f9812-7762-4e8d-8b54-d0a23cab0647"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Expected date]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="340" y="70" width="100" height="20" uuid="39bab05d-f388-4dcb-80ef-05f7e13942d2"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{expectedDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="194" splitType="Stretch">
+			<staticText>
+				<reportElement x="50" y="-10" width="100" height="30" uuid="1e7d7148-22cd-4db8-9511-4626c4d321d4"/>
+				<textElement>
+					<font size="14"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Delevery Location]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="340" y="-10" width="100" height="20" uuid="a8605a8a-ac52-45a1-a476-f7b71ceef912"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{delLocation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="45" width="100" height="20" uuid="fd80ebfb-b143-46ff-a2b8-9fcce3a8335f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{paymentType}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="50" y="40" width="100" height="30" uuid="358c10cb-5a35-4f6a-875d-813c5b778611"/>
+				<textElement>
+					<font size="14"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Payment Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="90" width="100" height="30" uuid="a603a6f5-cdc4-4f88-9219-5f71668dafe1"/>
+				<textElement>
+					<font size="14"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="340" y="100" width="100" height="20" uuid="8d8d5e81-df94-4b48-be29-bd3bff66dae6"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descrip}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="107" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="73" splitType="Stretch">
+			<rectangle radius="13">
+				<reportElement mode="Opaque" x="-15" y="20" width="584" height="50" forecolor="rgba(66, 134, 244, 0.5803922)" backcolor="rgba(66, 134, 244, 0.59607846)" uuid="bc788431-219c-4389-8c97-08ceb2fa5af9"/>
+				<graphicElement>
+					<pen lineWidth="5.0" lineStyle="Double"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="80" y="30" width="400" height="30" forecolor="#FFFFFF" uuid="9dfc743c-4059-4434-99d6-1fd04ecefb2d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Copyright © 2018  Automated Barcode Solutions (Pvt) Ltd . All rights reserved]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

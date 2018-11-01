@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Supplier_Payments_Report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="223c4659-747b-4e46-b417-f239947afb7a">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="My Driver-My Sql"/>
+	<queryString language="SQL">
+		<![CDATA[select * from supplierpayments]]>
+	</queryString>
+	<field name="supplierpayID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="supplierpayID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supplierpayments"/>
+	</field>
+	<field name="date" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supplierpayments"/>
+	</field>
+	<field name="supOrderID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="supOrderID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supplierpayments"/>
+	</field>
+	<field name="amount" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supplierpayments"/>
+	</field>
+	<field name="supName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="supName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supplierpayments"/>
+	</field>
+	<field name="chequeNumber" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="chequeNumber"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supplierpayments"/>
+	</field>
+	<field name="bank" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="bank"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supplierpayments"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="120" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="560" height="114" uuid="8b76472d-326d-4c71-b178-55e399ec4249"/>
+				<imageExpression><![CDATA["src/main/webApp/Images/pdfimg.PNG"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="-1" y="40" width="83" height="19" uuid="f53264f3-06d2-4460-a5f0-c550c0b168b8"/>
+				<text><![CDATA[Supplier Pay ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="40" width="68" height="30" uuid="b65cdf0a-ff8a-4b81-bd4c-3031b859e888"/>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="40" width="70" height="30" uuid="0a0a302b-21bd-4e86-b248-f422bc21fee5"/>
+				<text><![CDATA[Supplier Order]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="40" width="100" height="30" uuid="e84cbe12-ed6a-4d89-9657-425c59ff2057"/>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="40" width="100" height="30" uuid="ee31318f-fdac-4703-953b-37c5e10c4839"/>
+				<text><![CDATA[Bank]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="39" width="81" height="21" uuid="dc4a5cca-5333-40e3-b842-5f6ad0746faa"/>
+				<text><![CDATA[Cheque Number]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="fa77dc26-c588-49c9-9d2d-3d18bc0216e5"/>
+				<textFieldExpression><![CDATA[$F{supplierpayID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="0" width="100" height="30" uuid="17e1aebf-cbff-48f5-8a2e-3776e4fa2398">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="00e1aae1-0050-4390-990f-1ba5777005fc"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="0" width="60" height="30" uuid="badfd083-9f0f-42c3-ad5e-f78d13e12f4e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="925450d6-6cdb-4d0b-8288-f6ee7be1ab56"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{supOrderID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="0" width="100" height="30" uuid="14fbe3b3-dd4b-4c9a-b2cc-5d4b9affd380">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8d663cd4-5fa2-42fd-a75f-aa4300e3e9e9"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="100" height="30" uuid="d07c3e9a-0b40-4adf-a138-1841ff91f29b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="eaf65e59-eeed-4d42-b65a-9defef37e3e1"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{bank}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="451" y="0" width="100" height="30" uuid="906fab8a-bc07-4306-ae25-b1758f08c13d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3402d1b3-6f80-498c-81cc-f7ecd3a55523"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{chequeNumber}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

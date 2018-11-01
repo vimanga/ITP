@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PettyCash" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0616f2f3-d090-461a-b92d-f47bf10f5734">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Mysql"/>
+	<queryString language="SQL">
+		<![CDATA[select * from pettycashregister]]>
+	</queryString>
+	<field name="pettyCashId" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="pettyCashId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pettycashregister"/>
+	</field>
+	<field name="date" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pettycashregister"/>
+	</field>
+	<field name="amount" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pettycashregister"/>
+	</field>
+	<field name="employeeId" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="employeeId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pettycashregister"/>
+	</field>
+	<field name="reason" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="reason"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pettycashregister"/>
+	</field>
+	<field name="returnStatus" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="returnStatus"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="pettycashregister"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="110" splitType="Stretch">
+			<image>
+				<reportElement x="-10" y="10" width="580" height="100" uuid="6e24bfcb-df5e-475c-a2b4-3a8c70adde3a"/>
+				<imageExpression><![CDATA["src/main/webApp/Images/pdfimg.PNG"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="6cce16ef-44fb-4b03-984f-4310b30999b0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4a24456c-0ea0-4a3e-9dc6-e9930ae70ada"/>
+				</reportElement>
+				<text><![CDATA[pettyCashId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="0" width="100" height="30" uuid="46767b09-1dc2-477c-94c8-d7b53c6c36cc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cb8decec-e0c3-44df-b2e3-bf2e37a1aeb4"/>
+				</reportElement>
+				<text><![CDATA[date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="0" width="100" height="30" uuid="82bacb96-7ee1-4ccd-b02b-2ade1c8f4804">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ee698a03-ce76-4228-a8be-45a302c93c9f"/>
+				</reportElement>
+				<text><![CDATA[amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="100" height="30" uuid="9a547c17-35e6-4eb0-a425-d418737ce23d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b47ca309-7283-4734-a529-74cabea350fd"/>
+				</reportElement>
+				<text><![CDATA[employeeId]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="4e8e09b2-1cad-4693-a8c4-38fcd878b691">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4a24456c-0ea0-4a3e-9dc6-e9930ae70ada"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{pettyCashId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="0" width="100" height="30" uuid="a28cecd4-dc6e-4456-affc-31c8c9d02bde">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cb8decec-e0c3-44df-b2e3-bf2e37a1aeb4"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="0" width="100" height="30" uuid="65579c6c-b50a-4edc-b193-aebd2d472bc9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ee698a03-ce76-4228-a8be-45a302c93c9f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="100" height="30" uuid="f124ef8d-3752-44d7-b917-85ec006dd6a8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b47ca309-7283-4734-a529-74cabea350fd"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{employeeId}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

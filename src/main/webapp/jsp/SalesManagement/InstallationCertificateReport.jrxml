@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="InstallationCertificateReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="47f9578a-cd1f-4e6a-8a50-1e6b34e93ef4">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Mysql"/>
+	<queryString language="SQL">
+		<![CDATA[select * from installation_certificate]]>
+	</queryString>
+	<field name="installationID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="installationID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="installation_certificate"/>
+	</field>
+	<field name="installationPrefix" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="installationPrefix"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="installation_certificate"/>
+	</field>
+	<field name="installationCode" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="installationCode"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="installation_certificate"/>
+	</field>
+	<field name="ordId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ordId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="installation_certificate"/>
+	</field>
+	<field name="clienId" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="clienId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="installation_certificate"/>
+	</field>
+	<field name="techId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="techId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="installation_certificate"/>
+	</field>
+	<field name="drivId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="drivId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="installation_certificate"/>
+	</field>
+	<field name="cableLen" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="cableLen"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="installation_certificate"/>
+	</field>
+	<field name="conduitLen" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="conduitLen"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="installation_certificate"/>
+	</field>
+	<field name="swInstalled" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="swInstalled"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="installation_certificate"/>
+	</field>
+	<field name="swInstalledDescription" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="swInstalledDescription"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="installation_certificate"/>
+	</field>
+	<field name="opTraining" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="opTraining"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="installation_certificate"/>
+	</field>
+	<field name="opTrainingDescription" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="opTrainingDescription"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="installation_certificate"/>
+	</field>
+	<field name="fullyOperational" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fullyOperational"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="installation_certificate"/>
+	</field>
+	<field name="fullyOperationalDescription" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fullyOperationalDescription"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="installation_certificate"/>
+	</field>
+	<field name="timeIn" class="java.sql.Time">
+		<property name="com.jaspersoft.studio.field.label" value="timeIn"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="installation_certificate"/>
+	</field>
+	<field name="timeOut" class="java.sql.Time">
+		<property name="com.jaspersoft.studio.field.label" value="timeOut"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="installation_certificate"/>
+	</field>
+	<field name="dateInstalled" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="dateInstalled"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="installation_certificate"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="200" splitType="Stretch">
+			<image>
+				<reportElement x="-14" y="-10" width="583" height="90" uuid="b0aa2df5-4565-4d7c-b08d-8e1a7dcba7af"/>
+				<imageExpression><![CDATA["src/main/webapp/Images/pdfimg.PNG"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="123" y="90" width="240" height="30" forecolor="#000000" uuid="0a90e13f-7184-4329-a0c3-7e37b71e0304"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Installation Certificate -]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="337" y="92" width="130" height="34" uuid="4dcdf6ea-0516-4a3c-a041-2fd8d9cd22f6"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{installationID}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="468" y="101" width="100" height="30" uuid="af00fdf8-da77-4abf-9da7-d7414b6ff6d4"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="469" y="85" width="100" height="30" uuid="eff0fae8-df9e-44c9-b792-6769e9fe1117"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<staticText>
+				<reportElement x="160" y="21" width="100" height="30" uuid="a774f1ff-7a8c-4dae-8f05-968ff405f1fd"/>
+				<text><![CDATA[Static Text]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="66" splitType="Stretch">
+			<staticText>
+				<reportElement x="75" y="-32" width="400" height="30" forecolor="#FFFFFF" uuid="6181b424-6220-4533-bfe6-89cd7bf7422f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Copyright © 2018  Automated Barcode Solutions (Pvt) Ltd . All rights reserved]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
